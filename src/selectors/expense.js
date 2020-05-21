@@ -1,4 +1,5 @@
 // Get visible expenses
+
 export default (expenses, { text, sortBy, startDate, endDate }) => {
   return expenses
     .filter((expense) => {

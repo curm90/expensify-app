@@ -1,6 +1,6 @@
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
-// Add expense
+// ADD_EXPENSE
 export const addExpense = ({
   description = '',
   note = '',
@@ -12,18 +12,19 @@ export const addExpense = ({
     id: uuid(),
     description,
     note,
+    amount,
     createdAt,
   },
 });
 
-// Remove expense
-export const removeExpense = ({ id }) => ({
+// REMOVE_EXPENSE
+export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
   id,
 });
 
-// Edit expense
-export const editExpense = ({ id }) => ({
+// EDIT_EXPENSE
+export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
   id,
   updates,
