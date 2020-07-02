@@ -7,5 +7,6 @@ exports[`should render dashboard page 1`] = `
   </h1>
   <[object Object] />
   <[object Object] />
+  <[object Object] />
 </div>
 `;
